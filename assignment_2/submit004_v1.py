@@ -1,10 +1,9 @@
 from collections import defaultdict
 
-default_read = int(input("Enter number of reads: "))
-
+default_read = int(input("Enter number of k-mers: "))
 reads_list = []
 for _ in range(default_read):
-    reads_list.append(input())
+    reads_list.append(input("Enter k-mer: "))
 
 adj = defaultdict(list)
 id = 0
@@ -37,4 +36,4 @@ cycle = ""
 
 for node in path:
     cycle += node[0]
-print(cycle)
+print("ASSEMBELED GENOME: " + cycle[:-1] + '\n')

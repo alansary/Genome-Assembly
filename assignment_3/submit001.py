@@ -77,11 +77,11 @@ class CirculationProblem:
         self.write(flow, flows)
 
     def _input( self ):
-        vertex_count, edge_count = map(int, input().split())
+        vertex_count, edge_count = map(int, input("Enter n, m: ").split())
         graph = FlowGraph(vertex_count)
-        graph.print_graph()
+        # graph.print_graph()
         for _ in range(edge_count):
-            u, v, lower_bound, capacity = map(int, input().split())
+            u, v, lower_bound, capacity = map(int, input("Enter (u, v, l, c): ").split())
             graph.add_edge(u - 1, v - 1, lower_bound, capacity)
             # graph.print_graph()
 

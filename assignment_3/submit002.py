@@ -1,7 +1,6 @@
 import os
 import sys
 
-
 cwd = os.getcwd() 
 filename = cwd + "/33609_reads.txt"
 with open(filename, 'r') as fobj:
@@ -20,7 +19,6 @@ reads = sorted(reads)
 
 for read in reads:
 	print (read)
-
 
 def whether_opt(n, reads):
 	k_mers = set()

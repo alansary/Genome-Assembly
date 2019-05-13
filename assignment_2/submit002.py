@@ -14,7 +14,13 @@ class Eulerian_Cycle:
             self.printPath()
 
     def _input( self ):
-        data = [int(i) for i in input("Enter datas in a line:\n").split()]
+        data = [int(i) for i in input("Enter n and m: ").split()]
+        m = data[1]
+        for _ in range(m):
+            u, v = [int(i) for i in input("Enter edge from u to v: ").split()]
+            data.append(u)
+            data.append(v)
+
         self.n, self.number_of_explored_edges = int(data[0]), int(data[1])
         self.unusedEdges = [[] for _ in range(self.n)]
         self.adj = [[] for _ in range(self.n)]

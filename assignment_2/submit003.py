@@ -1,7 +1,7 @@
 from collections import defaultdict
 import itertools
 
-in_binary= int(input())
+in_binary= int(input("Enter k: "))
 position = in_binary-1
 
 first = '0'*in_binary

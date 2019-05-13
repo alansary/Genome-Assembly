@@ -92,7 +92,7 @@ class Assembling_challenge001:
 
     def readData( self ):
         cwd = os.getcwd()  # Get the current working directory (cwd)
-        filename = cwd + "/33609_reads.txt"
+        filename = cwd + "../33609_reads.txt"
         with open(filename, 'r') as fobj:
             all_lines = fobj.read().splitlines()
         n = int(input("Number of reads: "))
