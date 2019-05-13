@@ -1,0 +1,24 @@
+step 1:
+=======
+first select random n reads from given reads database and store it in a list.
+
+step 2:
+======
+assemble the reads and create Genome:
+reads is a list of selected reads.
+
+    current_Index = 0
+    genome = reads[0]
+    firstRead = reads[current_Index]
+    while True:
+        current_Read = reads[current_Index]
+        if 1 == len(reads):
+            break
+        del reads[current_Index]
+        current_Index, overlap = self.findLongestOverlap(current_Read + '$', reads)
+        genome += reads[current_Index][overlap:]
+    current_Index, overlap = self.findLongestOverlap(reads[0] + '$', [firstRead])
+    if overlap > 0:
+        return genome[:-overlap]
+    else:
+        return genome
